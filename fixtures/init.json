@@ -1,0 +1,137 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$dWqDX8MbopZK$q7j4zngElPHv4vmzBq1zDRfScgbgFUhyNq8zYmoT+aI=",
+    "last_login": "2019-07-04T19:39:03.164Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-07-04T19:38:58.658Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.building",
+  "pk": 1,
+  "fields": {
+    "created_at": "2019-07-04T19:39:29.137Z",
+    "updated_at": "2019-07-04T19:39:29.137Z",
+    "name": "Yavuz Apartman\u0131",
+    "no": "20",
+    "address": "5 Telsiz Mahallesi 111.Sokak Zeytinburnu / \u0130stanbul"
+  }
+},
+{
+  "model": "core.building",
+  "pk": 2,
+  "fields": {
+    "created_at": "2019-07-04T19:39:56.114Z",
+    "updated_at": "2019-07-04T19:39:56.114Z",
+    "name": "Deniz Apartman\u0131",
+    "no": "15",
+    "address": "Sultan S\u00fcleyman Caddesi Fatih / \u0130stanbul"
+  }
+},
+{
+  "model": "core.apartment",
+  "pk": 1,
+  "fields": {
+    "created_at": "2019-07-04T19:43:42.172Z",
+    "updated_at": "2019-07-04T19:59:24.487Z",
+    "building": 1,
+    "apartment_no": 2,
+    "floor": 1,
+    "square_meter": 85
+  }
+},
+{
+  "model": "core.apartment",
+  "pk": 2,
+  "fields": {
+    "created_at": "2019-07-04T19:43:57.062Z",
+    "updated_at": "2019-07-04T20:00:19.557Z",
+    "building": 2,
+    "apartment_no": 14,
+    "floor": 3,
+    "square_meter": 110
+  }
+},
+{
+  "model": "core.room",
+  "pk": 3,
+  "fields": {
+    "created_at": "2019-07-04T19:59:24.489Z",
+    "updated_at": "2019-07-04T19:59:24.489Z",
+    "apartment": 1,
+    "name": "Mutfak"
+  }
+},
+{
+  "model": "core.room",
+  "pk": 4,
+  "fields": {
+    "created_at": "2019-07-04T19:59:24.489Z",
+    "updated_at": "2019-07-04T19:59:24.489Z",
+    "apartment": 1,
+    "name": "Oturma Odas\u0131"
+  }
+},
+{
+  "model": "core.room",
+  "pk": 5,
+  "fields": {
+    "created_at": "2019-07-04T19:59:24.490Z",
+    "updated_at": "2019-07-04T19:59:24.490Z",
+    "apartment": 1,
+    "name": "Bo\u015f Oda"
+  }
+},
+{
+  "model": "core.room",
+  "pk": 6,
+  "fields": {
+    "created_at": "2019-07-04T20:00:19.558Z",
+    "updated_at": "2019-07-04T20:00:19.558Z",
+    "apartment": 2,
+    "name": "Mutfak"
+  }
+},
+{
+  "model": "core.room",
+  "pk": 7,
+  "fields": {
+    "created_at": "2019-07-04T20:00:19.559Z",
+    "updated_at": "2019-07-04T20:00:19.559Z",
+    "apartment": 2,
+    "name": "Oturma Odas\u0131"
+  }
+},
+{
+  "model": "core.room",
+  "pk": 8,
+  "fields": {
+    "created_at": "2019-07-04T20:00:19.560Z",
+    "updated_at": "2019-07-04T20:00:19.560Z",
+    "apartment": 2,
+    "name": "Salon"
+  }
+},
+{
+  "model": "core.furniture",
+  "pk": 1,
+  "fields": {
+    "created_at": "2019-07-04T20:01:56.915Z",
+    "updated_at": "2019-07-04T20:01:56.915Z",
+    "room": 4,
+    "name": "Televizyon",
+    "price": 3500
+  }
+}
+]
