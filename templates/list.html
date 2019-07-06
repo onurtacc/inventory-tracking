@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Buildings</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>No</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for build in buildings %}
+        <tr>
+            <td>{{ build.name }}</td>
+            <td>{{ build.no }}</td>
+            <td>{{ build.address }}</td>
+            <td>
+                <a href="">details</a>
+                <a href="">edit</a>
+                <a href="">delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

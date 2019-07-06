@@ -29,7 +29,7 @@ class Apartment(TimeTrackedModel):
         ordering = ['apartment_no']
 
     def __str__(self):
-        return self.building.name + " - " + str(self.apartment_no)
+        return self.building.name + " - " + "No: " + str(self.apartment_no)
 
 
 class Room(TimeTrackedModel):
