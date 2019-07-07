@@ -57,19 +57,19 @@ class Command(BaseCommand):
 
         self.stdout.write("Generating Furnishings...")
 
-        furniture = []
+        furnitures = []
         furnishings = ['Televizyon', 'Bilgisayar', 'Kanepe', 'Halı', 'Masa']
 
         for r in Room.objects.all():
-            for furnt in furnishings:
-                furniture.append(
+            for furniture in furnishings:
+                furnitures.append(
                     Furniture(
                         room=r,
-                        name=furnt,
+                        name=furniture,
                         price=random.randint(200, 4000)
                     )
                 )
-        Furniture.objects.bulk_create(furniture)
+        Furniture.objects.bulk_create(furnitures)
 
         self.stdout.write(
             self.style.SUCCESS(f'Inserted 20 Building, 10 Apartment, 3 Room and 5 Furniture')

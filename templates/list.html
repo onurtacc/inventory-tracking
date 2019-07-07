@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="tr">
 <head>
@@ -5,17 +6,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Inventory Tracking</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
 </head>
 <body>
-<h1>Buildings</h1>
+<h2 class="title">Buildings</h2>
 
-<table>
-    <thead>
+<table class="flat-table flat-table-1">
+    <thead class="thead-dark">
     <tr>
         <th>Name</th>
         <th>No</th>
         <th>Address</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -25,9 +29,83 @@
             <td>{{ build.no }}</td>
             <td>{{ build.address }}</td>
             <td>
-                <a href="">details</a>
-                <a href="">edit</a>
-                <a href="">delete</a>
+                <a href="">Edit</a>
+                <a href="">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h2 class="title">Apartments</h2>
+
+<table class="flat-table flat-table-2">
+    <thead>
+    <tr>
+        <th>Building</th>
+        <th>Apartment No</th>
+        <th>Floor</th>
+        <th>Square Meter(m²)</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for apart in apartments %}
+        <tr>
+            <td>{{ apart.building }}</td>
+            <td>{{ apart.apartment_no }}</td>
+            <td>{{ apart.floor }}</td>
+            <td>{{ apart.square_meter }}</td>
+            <td>
+                <a href="">Edit</a>
+                <a href="">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h2 class="title">Room</h2>
+
+<table class="flat-table flat-table-3">
+    <thead>
+    <tr>
+        <th>Apartment</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for room in rooms %}
+        <tr>
+            <td>{{ room.apartment }}</td>
+            <td>{{ room.name }}</td>
+            <td>
+                <a href="">Edit</a>
+                <a href="">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2 class="title">Furnishings</h2>
+
+<table class="flat-table flat-table-4">
+    <thead>
+    <tr>
+        <th>Room</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for furniture in furnishings %}
+        <tr>
+            <td>{{ furniture.room }}</td>
+            <td>{{ furniture.name }}</td>
+            <td>{{ furniture.price }}</td>
+            <td>
+                <a href="">Edit</a>
+                <a href="">Delete</a>
             </td>
         </tr>
     {% endfor %}
