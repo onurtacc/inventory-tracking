@@ -3,10 +3,10 @@ from rest_framework import routers
 from inventory_tracking.api import buildings, apartments, rooms, furnishings
 
 router = routers.DefaultRouter()
-router.register(r'buildings', buildings.ViewSet, 'ApiBuilding')
-router.register(r'apartments', apartments.ViewSet, 'ApiApartment')
-router.register(r'rooms', rooms.ViewSet, 'ApiRoom')
-router.register(r'furnishings', furnishings.ViewSet, 'ApiFurniture')
+router.register(r'buildings', buildings.BuildingViewSet, 'ApiBuilding')
+router.register(r'apartments', apartments.ApartmentViewSet, 'ApiApartment')
+router.register(r'rooms', rooms.RoomViewSet, 'ApiRoom')
+router.register(r'furnishings', furnishings.FurnitureViewSet, 'ApiFurniture')
 
 app_name = 'api'
 

@@ -2,12 +2,12 @@ from rest_framework import serializers, viewsets
 from ..core.models import Building
 
 
-class Serializer(serializers.ModelSerializer):
+class BuildingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Building
         fields = '__all__'
 
 
-class ViewSet(viewsets.ModelViewSet):
-    serializer_class = Serializer
+class BuildingViewSet(viewsets.ModelViewSet):
+    serializer_class = BuildingSerializer
     queryset = Building.objects.all()
