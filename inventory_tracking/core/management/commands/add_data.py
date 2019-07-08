@@ -4,7 +4,7 @@ import random
 
 
 class Command(BaseCommand):
-    help = "Insert 20 Building, 10 Apartment, 3 Room, 5 Furniture into database."
+    help = "Insert 5 Building, 10 Apartment, 3 Room, 5 Furniture into database."
 
     def handle(self, *args, **options):
         self.stdout.write("Cleaning Database...")
@@ -13,7 +13,7 @@ class Command(BaseCommand):
         self.stdout.write("Generating Buildings...")
         buildings = []
 
-        for num in range(1, 21):
+        for num in range(1, 6):
             buildings.append(
                 Building(name=f"Apartman #{num}", no=random.randint(1, 40), address=f"Lorem Ipsum Dolor Sit Amet")
             )
@@ -72,5 +72,5 @@ class Command(BaseCommand):
         Furniture.objects.bulk_create(furnitures)
 
         self.stdout.write(
-            self.style.SUCCESS(f'Inserted 20 Building, 10 Apartment, 3 Room and 5 Furniture')
+            self.style.SUCCESS(f'Inserted 5 Building, 10 Apartment, 3 Room and 5 Furniture')
         )
