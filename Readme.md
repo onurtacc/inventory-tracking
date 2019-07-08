@@ -3,7 +3,7 @@
 ### Management Commands
 | Command  | Description	 |
 | --- | --- |
-|python manage.py add_data | Insert 5 Building, 10 Apartment, 3 Room, 5 Furniture into database.|
+|python manage.py add_data | Insert 5 Building, 10 Apartment per building, 3 Room per apartment, 5 Furniture per room into database.|
 
 
 ## API
