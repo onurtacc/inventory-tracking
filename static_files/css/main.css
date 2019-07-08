@@ -3,6 +3,27 @@
     text-align: center;
     margin: 10px;
 }
-table{
+
+table {
     text-align: center;
+}
+
+.action-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.action-button:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.action-button.edit {
+    background: blue;
+}
+
+.action-button.delete {
+    background: red;
 }
