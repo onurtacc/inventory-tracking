@@ -7,13 +7,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inventory Tracking</title>
+    <link rel="stylesheet" href="{% static 'lib/datatables.net-dt/css/jquery.dataTables.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
 </head>
 <body>
 <h2 class="title">Buildings</h2>
 
-<table class="flat-table flat-table-1">
+<table class="flat-table table table-striped table-bordered">
     <thead class="thead-dark">
     <tr>
         <th>Name</th>
@@ -38,8 +40,8 @@
 </table>
 <h2 class="title">Apartments</h2>
 
-<table class="flat-table flat-table-2">
-    <thead>
+<table class="flat-table table table-striped table-bordered">
+    <thead class="thead-dark">
     <tr>
         <th>Building</th>
         <th>Apartment No</th>
@@ -63,10 +65,10 @@
     {% endfor %}
     </tbody>
 </table>
-<h2 class="title">Room</h2>
+<h2 class="title">Rooms</h2>
 
-<table class="flat-table flat-table-3">
-    <thead>
+<table class="flat-table table table-striped table-bordered">
+    <thead class="thead-dark">
     <tr>
         <th>Apartment</th>
         <th>Name</th>
@@ -89,12 +91,13 @@
 
 <h2 class="title">Furnishings</h2>
 
-<table class="flat-table flat-table-4">
-    <thead>
+<table class="flat-table table table-striped table-bordered">
+    <thead class="thead-dark">
     <tr>
         <th>Room</th>
         <th>Name</th>
         <th>Price</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -102,7 +105,7 @@
         <tr>
             <td>{{ furniture.room }}</td>
             <td>{{ furniture.name }}</td>
-            <td>{{ furniture.price }}</td>
+            <td>{{ furniture.price }} ₺</td>
             <td>
                 <a href="">Edit</a>
                 <a href="">Delete</a>
@@ -111,5 +114,8 @@
     {% endfor %}
     </tbody>
 </table>
+<script src="{% static 'lib/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'lib/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

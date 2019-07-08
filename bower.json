@@ -1,0 +1,24 @@
+{
+  "name": "inventory-tracking",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "onurtacc <onur.tac@orgino.com.tr>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/onurtacc/inventory-tracking",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static_files/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "datatables.net": "^1.10.19",
+    "datatables.net-dt": "^3.2.2",
+    "bootstrap": "^4.3.1"
+  }
+}

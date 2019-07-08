@@ -4,3 +4,6 @@
 __pycache__
 *.sqlite3
 inventory_tracking/local_settings.py
+node_modules
+package-lock.json
+static_files/lib
