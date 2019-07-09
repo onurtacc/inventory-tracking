@@ -1,7 +1,21 @@
 # Inventory Tracking
 
+### Setup
+#### Auto
+- Run on terminal setup.sh file
+
+####Manuel
+- Create python3 virtual environment and activate it (python3 -m venv venv)
+- Run 'pip install -r requirements.txt' on terminal
+- Run 'npm install' on terminal
+- Run 'bower install' on terminal
+- Do migrate (python manage.py migrate)
+- Run 'python manage.py add_data' or 'python manage.py loaddata fixtures/init.json' on terminal for datas.
+- Start Local Server (python manage.py runserver)
+
+
 ### Management Commands
-| Command  | Description	 |
+| Command | Description |
 | --- | --- |
 |python manage.py add_data | Insert 5 Building, 10 Apartment per building, 3 Room per apartment, 5 Furniture per room into database.|
 

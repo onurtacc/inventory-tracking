@@ -23,4 +23,7 @@ urlpatterns = [
     url(r'furnishings/new', views.FurnitureCreate.as_view(template_name='form.html'), name='furniture_new'),
     url(r'furnishings/edit/(?P<pk>\d+)', views.FurnitureUpdate.as_view(template_name='form.html'),
         name='furniture_update'),
+
+    url(r'sum/$', views.aggregate, name='aggregate'),
+
 ]
