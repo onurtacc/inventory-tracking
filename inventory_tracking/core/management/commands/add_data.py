@@ -15,7 +15,7 @@ class Command(BaseCommand):
 
         for num in range(1, 6):
             buildings.append(
-                Building(name=f"Apartman #{num}", no=random.randint(1, 40), address=f"Lorem Ipsum Dolor Sit Amet")
+                Building(name=f"Building #{num}", no=random.randint(1, 40), address=f"Lorem Ipsum Dolor Sit Amet")
             )
 
         Building.objects.bulk_create(buildings)

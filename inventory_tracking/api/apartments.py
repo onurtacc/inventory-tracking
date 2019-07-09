@@ -3,6 +3,8 @@ from ..core.models import Apartment
 
 
 class ApartmentSerializer(serializers.ModelSerializer):
+    building = serializers.StringRelatedField()
+
     class Meta:
         model = Apartment
         fields = '__all__'

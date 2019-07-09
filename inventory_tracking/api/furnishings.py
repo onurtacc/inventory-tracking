@@ -3,6 +3,8 @@ from ..core.models import Furniture
 
 
 class FurnitureSerializer(serializers.ModelSerializer):
+    room = serializers.StringRelatedField()
+
     class Meta:
         model = Furniture
         fields = '__all__'

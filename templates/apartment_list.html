@@ -1,0 +1,20 @@
+{% extends 'partials/layout.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container">
+        <h2 class="title">Apartments</h2>
+
+        <table class="flat-table table table-striped table-bordered apartment-table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Building</th>
+                <th>Apartment No</th>
+                <th>Floor</th>
+                <th>Square Meter(m²)</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+        </table>
+        <a class="action-button add" href="{% url 'apartment_new' %}">Add Apartment</a>
+    </div>
+{% endblock %}

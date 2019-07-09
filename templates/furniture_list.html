@@ -1,0 +1,19 @@
+{% extends 'partials/layout.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container">
+        <h2 class="title">Furnishings</h2>
+
+        <table class="flat-table table table-striped table-bordered furniture-table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Room</th>
+                <th>Name</th>
+                <th>Price ($)</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+        </table>
+        <a class="action-button add" href="{% url 'furniture_new' %}">Add Furniture</a>
+    </div>
+{% endblock %}

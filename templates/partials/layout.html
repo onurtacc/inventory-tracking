@@ -1,0 +1,11 @@
+{% load staticfiles %}
+{% include "partials/head.html" %}
+<body>
+{% include 'partials/header.html' %}
+{% block content %}{% endblock %}
+<script src="{% static 'lib/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'lib/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'lib/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

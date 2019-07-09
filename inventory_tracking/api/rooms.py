@@ -3,6 +3,8 @@ from ..core.models import Room
 
 
 class RoomSerializer(serializers.ModelSerializer):
+    apartment = serializers.StringRelatedField()
+
     class Meta:
         model = Room
         fields = '__all__'
