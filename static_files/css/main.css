@@ -24,6 +24,10 @@ table {
     background: blue;
 }
 
+.action-button.add {
+    background: green;
+}
+
 .action-button.delete {
     background: red;
 }

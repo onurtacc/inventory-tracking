@@ -9,5 +9,6 @@ class BuildingSerializer(serializers.ModelSerializer):
 
 
 class BuildingViewSet(viewsets.ModelViewSet):
+    pagination_class = None
     serializer_class = BuildingSerializer
     queryset = Building.objects.all()
