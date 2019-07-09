@@ -4,7 +4,7 @@
 #### Auto
 - Run on terminal setup.sh file
 
-####Manuel
+#### Manuel
 - Create python3 virtual environment and activate it (python3 -m venv venv)
 - Run 'pip install -r requirements.txt' on terminal
 - Run 'npm install' on terminal
