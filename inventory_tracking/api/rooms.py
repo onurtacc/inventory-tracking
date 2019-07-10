@@ -4,6 +4,7 @@ from ..core.models import Room
 
 class RoomSerializer(serializers.ModelSerializer):
     apartment = serializers.StringRelatedField()
+    total_price = serializers.IntegerField(source='get_furniture_prices')
 
     class Meta:
         model = Room

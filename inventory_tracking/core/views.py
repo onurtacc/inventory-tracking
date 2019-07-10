@@ -8,13 +8,6 @@ def main_page(request):
     return render(request, "partials/layout.html")
 
 
-def aggregate(request):
-    payload = {
-        'rooms': Room.objects.all()
-    }
-    return render(request, "aggregate.html", payload)
-
-
 def building_list(request):
     return render(request, "building_list.html")
 

@@ -15,6 +15,14 @@ class Building(TimeTrackedModel):
     def __str__(self):
         return self.name
 
+    def get_all_prices(self):
+        total = 0
+        for i in Apartment.objects.filter(building=self.pk):
+            x = 0
+            x += i.get_room_prices()
+            total += x
+        return total
+
 
 class Apartment(TimeTrackedModel):
     building = models.ForeignKey(Building, related_name="apartments", on_delete=models.CASCADE)
@@ -31,6 +39,14 @@ class Apartment(TimeTrackedModel):
     def __str__(self):
         return self.building.name + " - " + "No: " + str(self.apartment_no)
 
+    def get_room_prices(self):
+        total = 0
+        for i in Room.objects.filter(apartment=self.pk):
+            x = 0
+            x += i.get_furniture_prices()
+            total += x
+        return total
+
 
 class Room(TimeTrackedModel):
     apartment = models.ForeignKey(Apartment, related_name="rooms", on_delete=models.CASCADE)
@@ -43,6 +59,12 @@ class Room(TimeTrackedModel):
 
     def __str__(self):
         return self.apartment.__str__() + " - " + self.name
+
+    def get_furniture_prices(self):
+        total = 0
+        for i in Furniture.objects.filter(room=self.pk):
+            total += i.price
+        return total
 
 
 class Furniture(TimeTrackedModel):
